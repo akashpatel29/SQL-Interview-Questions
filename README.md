@@ -47,7 +47,7 @@ o While
 
 o For Loop
 
-What is the difference between SQL and PL/SQL?
+## What is the difference between SQL and PL/SQL?
 SQL: It is referred as Structured Query Language.
 
 • Only simple IF / Else statements.
