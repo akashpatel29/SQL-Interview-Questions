@@ -1,7 +1,7 @@
 ## SQL-Interview-Questions
 
 # SQL Server
-What is a database?
+# What is a database?
 A database is described as an organized way of collection of DATA. It is the collection of schemes, tables, queries, reports, views and other objects.
 
 Syntax: CREATEDATABASEDatabaseName
@@ -10,10 +10,10 @@ Example: CREATEDATABASE Student
 
 or you can Create Database through Design/ Wizard form by right clicking on DATABASE option-New Database.
 
-What is DBMS?
+# What is DBMS?
 A Database Management System (DBMS) is a program that controls creation, maintenance and use of a database. DBMS can be termed as File Manager that manages data in a database rather than saving it in file systems.
 
-What is SQL?
+# What is SQL?
 Structured Query Language, also known as SQL, is a programming language designed for managing Relational Database Management Systems (RDBMSs). SQL is an International Organization for Standardization (ISO) standard. In RDBMS all the data is stored in tables with each table consisting of rows and columns.
 
 Example of Sql Server 2014 SQL format:
@@ -24,7 +24,7 @@ Create database:
 
 Output: Here we can see our database is created.
 
-What is PL/SQL?
+# What is PL/SQL?
 PL/SQL Control Statements in Oracle.
 
 Control Statements,
@@ -68,7 +68,7 @@ PL/SQL: It is referred as Procedure Language / Structure Query Language:
 
 • PL/SQL language includes object oriented programming techniques such as encapsulation, function overloading, and information hiding (all but inheritance).
 
-What is RDBMS?
+# What is RDBMS?
 RDBMS: It is referred as Relation Database Management Systems (RDBMS). RDBMS possesses a set of the below given characteristics:
 
 • Write-intensive operations: The RDBMS is frequently written to and is often used in transaction-oriented applications.
@@ -81,7 +81,7 @@ RDBMS: It is referred as Relation Database Management Systems (RDBMS). RDBMS pos
 
 • Data integrity: The RDBMS features many components designed to ensure data integrity. This includes rollback operations, referential integrity, and transaction-oriented operations.
 
-What is a database table?
+# What is a database table?
 Database table: Table contains records in the form of rows and columns. A permanent table is created in the database you specify and remains in the database permanently, until you delete it.
 
 Syntax:
@@ -92,10 +92,10 @@ Drop syntax: drop table TableName
 
 Select Syntax: Select * from TableName
 
-What is a query?
+# What is a query?
 A DB query is a code written in order to get the information back from the database. Query can be designed in such a way that it matched with our expectation of the result set. Simply, a question to the Database.
 
-What is subquery?
+# What is subquery?
 A subquery is a query within another query. The outer query is called as main query, and inner query is called subquery. SubQuery is always executed first, and the result of subquery is passed on to the main query.
 
 What are the types of subquery?
