@@ -98,14 +98,14 @@ A DB query is a code written in order to get the information back from the datab
 # What is subquery?
 A subquery is a query within another query. The outer query is called as main query, and inner query is called subquery. SubQuery is always executed first, and the result of subquery is passed on to the main query.
 
-What are the types of subquery?
+# What are the types of subquery?
 There are two types of subquery – Correlated and Non-Correlated.
 
 A correlated subquery cannot be considered as independent query, but it can refer the column in a table listed in the FROM the list of the main query.
 
 A Non-Correlated sub query can be considered as independent query and the output of subquery are substituted in the main query.
 
-How to create a table in SQL?
+# How to create a table in SQL?
 SQL provides an organized way for table creation.
 
 Syntax: Create table TableName (columnName1 datatype, columnName2 datatype )
@@ -114,17 +114,17 @@ The following is an example of creating a simple table-
 
 create table Info (Name varchar(20), BirthDate date,Phone nvarchar(12), City varchar(20))
 
-What are tables and Fields?
+# What are tables and Fields?
 A table is a set of data that are organized in a model with Columns and Rows. Columns can be categorized as vertical, and Rows are horizontal. A table has specified number of column called fields but can have any number of rows which is called record.
 
-How to delete a table in SQL Server?
+# How to delete a table in SQL Server?
 Delete Data Record from Database Table and deleting an existing table by the following method:
 
 Syntax: To delete all table records of a table:
 
 Delete TableName DELETE info
 
-How to update a database table using SQL?
+# How to update a database table using SQL?
 To update an existing Table we use SQL Command UPDATE: It will update the records as per user defined query/need.
 
 Syntax:
@@ -133,7 +133,7 @@ Update TableName SET ColumnName = NewData where Condition
 
 Update info Set City = 'Baroda' where id = 2
 
-What is a database relationship?
+# What is a database relationship?
 Relationships are created by linking the column in one table with the column in another table. There are four different types of relationship that can be created.
 
 The relationships are listed below:
@@ -154,7 +154,7 @@ Many to Many Relationship:
 
 The third table acts as a bridge between the tables that want to establish a Many to Many relationship. The bridge table stores the common information between Many to Many relationship tables. Have a look at the following diagram:
 
-What is a primary key of a database?
+# What is a primary key of a database?
 Primary key:-
 
 A table column with this constraint is called the key column for the table. This constraint helps the table to make sure that the value is not repeated and also that there are no null entries.
@@ -163,10 +163,10 @@ Now this column does not allow null values and duplicate values. You can try ins
 
 Example:
 
-What is a unique key?
+# What is a unique key?
 A Unique key constraint uniquely identified each record in the database. This provides uniqueness for the column or set of columns. A Primary key constraint has automatic unique constraint defined on it. But not, in the case of Unique Key. There can be many unique constraint defined per table, but only one Primary key constraint defined per table.
 
-What is a foreign key of a database?
+# What is a foreign key of a database?
 To define the relationship between two tables (one is called parent and the other one is the child table) connected by columns, a foreign key constraint is used. In this constraint the values of the child table must appear in the parent table, which means that for a foreign key, one table should point to a Primary Key in another table. A table can have multiple foreign keys and each foreign key can have a different referenced table.
 
 Example: To understand the foreign key clearly let's assume the following two tables:
@@ -179,7 +179,7 @@ Syntax: CREATE TABLE table_name(Col1 datatype NOT NULL, Col2 datatype NOT NULL, 
 
 AT SINGLE COLUMN LEVEL
 
-What is database normalization?
+# What is database normalization?
 Database normalization is the process of organizing the fields and tables of a relational database to minimize redundancy and dependency. Normalization usually involves dividing large tables into smaller (and less redundant) tables and defining relationships among them. Normalization is a bottom-up technique for database design.
 
 The evolution of Normalization theories is illustrated below:
@@ -198,7 +198,7 @@ The evolution of Normalization theories is illustrated below:
 
 • 6th Normal Form
 
-What are database normalization forms?
+# What are database normalization forms?
 Normalization is the process of organizing data into a related table. it also eliminates redundancy and increases the integrity which improves performance of the query. To normalize a database, we divide the database into tables and establish relationships between the tables.
 
 • First Normal Form (1st NF)
@@ -227,16 +227,16 @@ Fourth Normal Form (3NF):
 
 Meeting all the requirements of third normal form and it should not have multi- valued dependencies.
 
-What is Denormalization.
+# What is Denormalization.
 DeNormalization is a technique used to access the data from higher to lower normal forms of database. It is also process of introducing redundancy into a table by incorporating data from the related tables.
 
-What is a stored procedure?
+# What is a stored procedure?
 A Stored Procedure is a collection or a group of T-SQL statements. Stored Procedures are a precompiled set of one or more statements that are stored together in the database. They reduce the network load because of the precompilation. We can create a Stored Procedure using the "Create proc" statement.
 
-Why we use Stored Procedure
+# Why we use Stored Procedure
 There are several reasons to use a Stored Procedure. They are a network load reducer and decrease execution time because they are precompiled. The most important use of a Stored Procedure is for security purposes. They can restrict SQL Injection. We can avoid SQL injection by use of a Stored Procedure.
 
-How to create a Stored Procedure
+# How to create a Stored Procedure
 CREATE PROCEDURE spEmployee AS
 
 BEGIN
@@ -253,7 +253,7 @@ Advantages of using a Stored Procedure in SQL Server
 
 • Stored Procedures can be encrypted and that also prevents SQL Injection Attacks
 
-What is a function in SQL Server?
+# What is a function in SQL Server?
 A function is a sequence of statements that accepts input, processes them to perform a specific task and provides the output. Functions must have a name but the function name can never start with a special character such as @, $, #, and so on.
 
 Types of function
@@ -278,7 +278,7 @@ select * from ss(1)
 
 Output:
 
-What are the different types of functions in SQL Server?
+# What are the different types of functions in SQL Server?
 A function must return a result. So that is also called a function that returns a result or a value. When we create it a function must specify a value type that will return a value.
 
 • Functions only work with select statements.
@@ -299,7 +299,7 @@ The following is the function list in SQL Server databases.
 
 SQL Server contains the following aggregates functions:
 
-What is a trigger in SQL Server?
+# What is a trigger in SQL Server?
 "A Trigger is a Database object just like a stored procedure or we can say it is a special kind of Stored Procedure which fires when an event occurs in a database.".
 
 It is a database object that is bound to a table and is executed automatically. We cannot explicitly call any trigger. Triggers provide data integrity and used to access and check data before and after modification using DDL or DML query.
@@ -330,7 +330,7 @@ Output:
 
 When we insert, update or delete in a table in a database then the following message appears:
 
-Why do we need triggers?
+# Why do we need triggers?
 Why and when to use a trigger:
 We use a trigger when we want some event to happen automatically on certain desirable scenarios. You have a table that changes frequently, now you want to know how many times and when these changes take place. In that case you can create a trigger that will insert the desired data into another table whenever any change in the main table occurs.
 
@@ -370,7 +370,7 @@ PRINT 'AFTER INSERT trigger fired.'
 
 GO
 
-What are the different types of triggers?
+# What are the different types of triggers?
 Triggers are a special type of stored procedure which is executed automatically based on the occurrence of a database event. These events can be categorized as:
 
 • Data Manipulation Language (DML) and
@@ -417,7 +417,7 @@ event_type | event_group }[, ...n] AS
 
 CREATE TRIGGER tr_TableAudit ON DATABASE FOR CREATE_TABLE, ALTER_TABLE, DROP_TABLE AS PRINT 'You must disable the TableAudit trigger in order to change any table in this database ' ROLLBACK GO
 
-What is a view in the database?
+# What is a view in the database?
 A View is nothing but a select query with a name given to it or we can simply say a view is a Named Query. Ok! Why do we need a view? There can be many answers for this. Some of the important stuff I feel is:
 
 • A view can combine data from multiple tables using adequate joins and while bringing it may require complex filters and calculated data to form the required result set. From a user's point of view, all these complexities are hidden data queried from a single table.
@@ -436,7 +436,7 @@ Views can be indexed for better performance.
 
 Insert, update, delete can be done on an updatable view.
 
-Why do I need views in a database?
+# Why do I need views in a database?
 There are a number of scenarios where we have to look for a view as a solution.
 
 • To hide the complexity of the underlying database schema, or customize the data and schema for a set of users.
@@ -459,12 +459,12 @@ There are two types of views.
 
 • Complex View
 
-What is the difference between Primary key and unique key?
+# What is the difference between Primary key and unique key?
 Primary key does not allow the null values but unique key allows one null value.
 
 Primary key will create clustered index on column but unique key will create non-clustered index by default.
 
-How can you increase SQL performance?
+# How can you increase SQL performance?
 Following are tips which will increase your SQl performance:-
 
 Every index increases the time takes to perform INSERTS, UPDATES, and DELETES, so the number of indexes should not be too much. Try to use maximum 4-5 indexes on one table, not more. If you have read-only table, then the number of indexes may be increased.
@@ -481,30 +481,30 @@ Clustered indexes are more preferable than nonclustered, if you need to select b
 
 You can use the SQL Server Profiler Create Trace Wizard with "Identify Scans of Large Tables" trace to determine which tables in your database may need indexes. This trace will show which tables are being scanned by queries instead of using an index.
 
-What is the use of OLAP?
+# What is the use of OLAP?
 OLAP is useful because it provides fast and interactive access to aggregated data and the ability to drill down to detail.
 
-What is a measure in OLAP?
+# What is a measure in OLAP?
 Measures are the key performance indicator that you want to evaluate. To determine which of the numbers in the data might be measures. A rule of thumb is if a number makes sense when it is aggregated, then it is a measure.
 
-What are dimensions in OLAP?
+# What are dimensions in OLAP?
 Dimensions are the categories of data analysis. For example, in a revenue report by month by sales region, the two dimensions needed are time and sales region. Typical dimensions include product, time, and region.
 
-What are levels in dimensions?
+# What are levels in dimensions?
 Dimensions are arranged in hierarchical levels, with unique positions within each level. For example, a time dimension may have four levels, such as Year, Quarter, Month, and Day. Or the dimension might have only three levels, for example, Year, Week, and Day. The values within the levels are called members. For example, the years 2002 and 2003 are members of the level Year in the Time dimension.
 
-What are fact tables and dimension tables in OLAP?
+# What are fact tables and dimension tables in OLAP?
 Twist: - Can you explain the star schema for OLAP?
 
 The dimensions and measures are physically represented by a star schema. Dimension tables revolve around fact table. A fact table contains a column for each measure as well as a column for each dimension. Each dimension column has a foreign -key relationship to the related dimension table, and the dimension columns taken together are the key to the fact table.
 
-What is DTS?
+# What is DTS?
 DTS is used to import data and while importing it helps us to transform and modify data. The name itself is self explanatory DTS ( Data transformation Services).
 
-What is fill factor ? or When does page split occurs?
+# What is fill factor ? or When does page split occurs?
 The 'fill factor' option specifies how full SQL Server will make each index page. When there is no free space to insert new row on the index page, SQL Server will create new index page and transfer some rows from the previous page to the new one. This operation is called page splits. You can reduce the number of page splits by setting the appropriate fill factor option to reserve free space on each index page. The fill factor is a value from 1 through 100 that specifies the percentage of the index page to be left empty. The default value for fill factor is 0. It is treated similarly to a fill factor value of 100, the difference in that SQL Server leaves some space within the upper level of the index tree for FILLFACTOR = 0. The fill factor percentage is used only at the time when the index is created. If the table contains read-only data (or data that very rarely changed), you can set the 'fill factor' option to 100. When the table's data is modified very often, you can decrease the fill factor to 70% or whatever you think is best.
 
-What is RAID and how does it work?
+# What is RAID and how does it work?
 Redundant Array of Independent Disks (RAID) is a term used to describe the technique of improving data availability through the use of arrays of disks and various data-striping methodologies. Disk arrays are groups of disk drives that work together to achieve higher data-transfer and I/O rates than those provided by single large drives. An array is a set of multiple disk drives plus a specialized controller (an array controller) that keeps track of how data is distributed across the drives. Data for a particular file is written in segments to the different drives in the array rather than being written to a single drive.
 
 For speed and reliability, it is better to have more disks. When these disks are arranged in certain patterns and are use a specific controller, they are called a Redundant Array of Inexpensive Disks (RAID) set. There are several numbers associated with RAID, but the most common are 1, 5 and 10.
@@ -574,7 +574,7 @@ SELECT SCOPE_IDENTITY() -- It returns value 1 this was inserted by insert query 
 
 SELECT IDENT_CURRENT('SAMPLE2') -- It returns value inserted in SAMPLE2 table
 
-Difference between char varchar and nvarchar in sql server
+# Difference between char varchar and nvarchar in sql server
 Char DataType
 
 Char datatype which is used to store fixed length of characters. Suppose if we declared char(50) it will allocates memory for 50 characters. Once we declare char(50) and insert only 10 characters of word then only 10 characters of memory will be used and other 40 characters of memory will be wasted.
@@ -589,7 +589,7 @@ nvarchar datatype same as varchar datatype but only difference nvarchar is used 
 
 So if we are not using other languages then it’s better to use varchar datatype instead of nvarchar
 
-Difference between bit tinyint smallint int and bigint datatypes in SQL Server
+# Difference between bit tinyint smallint int and bigint datatypes in SQL Server
 
 Bit DataType
 
@@ -611,7 +611,7 @@ Bigint DataType
 
 This datatype represents a signed 64-bit integer which is used to store values from -2^63 (-9223372036854775808) through 2^63-1 (9223372036854775807). Its storage size is 8 bytes.
 
-What is the difference between DELETE TABLE and TRUNCATE TABLE commands?
+# What is the difference between DELETE TABLE and TRUNCATE TABLE commands?
 DELETE TABLE syntax logs the deletes thus make the delete operation slow. TRUNCATE table does not log any information but it logs information about deallocation of data page of the table so TRUNCATE table is faster as compared to delete table.
 
 DELETE table can have criteria while TRUNCATE cannot.
