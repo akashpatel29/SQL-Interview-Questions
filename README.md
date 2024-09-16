@@ -643,7 +643,7 @@ Phantom reads occur due to a transaction being able to read a row on the first r
 
 Interestingly, the phantom reads can occur even with the default isolation level supported by SQL Server: READ COMMITTED. The only isolation level that does not allow phantoms is SERIALIZABLE, which ensures that each transaction is completely isolated from others. In other words, no one can acquire any type of locks on the affected row while it is being modified.
 
-What are different transaction levels in SQL SERVER?
+# What are different transaction levels in SQL SERVER?
 Twist: - What are different types of locks in SQL SERVER?
 
 Transaction Isolation level decides how is one process isolated from other process. Using transaction levels, you can implement locking in SQL SERVER.
@@ -670,7 +670,7 @@ Following is the syntax for setting transaction level in SQL SERVER.
 
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 
-What are the different locks in SQL SERVER?
+# What are the different locks in SQL SERVER?
 Depending on the transaction level, six types of lock can be acquired on data:-
 
 Intent
@@ -703,24 +703,24 @@ Bulk Update
 
 Bulk update locks (BU) are used when performing a bulk-copy of data into a table with TABLOCK hint. These locks improve performance while bulk copying data into a table; however, they reduce concurrency by effectively disabling any other connections to read or modify data in the table.
 
-Can we suggest locking hints to SQL SERVER?
+# Can we suggest locking hints to SQL SERVER?
 We can give locking hints that helps you over ride default decision made by SQL Server. For instance, you can specify the ROWLOCK hint with your UPDATE statement to convince SQL Server to lock each row affected by that data modification. Whether it is prudent to do so is another story; what will happen if your UPDATE affects 95% of rows in the affected table? If the table contains 1000 rows, then SQL Server will have to acquire 950 individual locks, which is likely to cost a lot more in terms of memory than acquiring a single table lock. So think twice before you bombard your code with ROWLOCKS.
 
-What is LOCK escalation?
+# What is LOCK escalation?
 Lock escalation is the process of converting of low-level locks (like rowlocks, page locks) into higher -level locks (like table locks). Every lock is a memory structure too many locks would mean, more memory being occupied by locks. To prevent this from happening, SQL Server escalates the many fine-grain locks to fewer coarse-grain locks. Lock escalation threshold was definable in SQL Server 6.5, but from SQL Server 7.0 onwards SQL Server dynamically manages it.
 
-What are the different ways of moving data between databases in SQL Server?
+# What are the different ways of moving data between databases in SQL Server?
 There are lots of options available; you have to choose your option depending upon your requirements. Some of the options you have are BACKUP/RESTORE, detaching and attaching databases, replication, DTS, BCP, logshipping, INSERT...SELECT, SELECT...INTO, creating INSERT scripts to generate data.
 
-What is the difference between a HAVING CLAUSE and a WHERE CLAUSE?
+# What is the difference between a HAVING CLAUSE and a WHERE CLAUSE?
 You can use Having Clause with the GROUP BY function in a query and WHERE Clause is applied to each row before, they are part of the GROUP BY function in a query.
 
-What is the difference between UNION and UNION ALL SQL syntax?
+# What is the difference between UNION and UNION ALL SQL syntax?
 UNION SQL syntax is used to select information from two tables. But it selects only distinct records from both the table, while UNION ALL selects all records from both the tables.
 
 Note :- Selected records should have same datatype or else the syntax will not work.
 
-What are the different types of triggers in SQl SERVER?
+# What are the different types of triggers in SQl SERVER?
 There are two types of triggers:-
 
 INSTEAD OF triggers
@@ -736,7 +736,7 @@ INSTEAD OF triggers are executed automatically before the Primary Key and the Fo
 if we have multiple AFTER Triggers on table how can we define the sequence od the triggers?
 If a table has multiple AFTER triggers, then you can specify which trigger should be executed first and which trigger should be executed last using the stored procedure sp_settriggerorder.
 
-What is SQL injection?
+# What is SQL injection?
 It is a Form of attack on a database-driven Web site in which the attacker executes unauthorized SQL commands by taking advantage of insecure code on a system connected to the Internet, bypassing the firewall. SQL injection attacks are used to steal information from a database from which the data would normally not be available and/or to gain access to an organization’s host computers through the computer that is hosting the database.
 
 SQL injection attacks typically are easy to avoid by ensuring that a system has strong input validation.
@@ -751,7 +751,7 @@ SELECT email, passwd, login_id, full_name FROM members WHERE email = ‘x’; DR
 
 Think what will happen to your database.
 
-What is the difference between Stored Procedure (SP) and User Defined Function (UDF)?
+# What is the difference between Stored Procedure (SP) and User Defined Function (UDF)?
 Following are some major differences between a stored procedure and user defined functions:-
 
 You can not change any data using UDF while you can do everything with a stored procedure.
@@ -764,7 +764,7 @@ If there is an error in UDF its stops executing. But in SP’s it just ignores t
 
 UDF cannot make permanent changes to server environments while SP’s can change some of the server environment.
 
-How can you raise custom errors from stored procedure?
+# How can you raise custom errors from stored procedure?
 The RAISERROR statement is used to produce an ad hoc error message or to retrieve a custom message that is stored in the sysmessages table. You can use this statement with the error handling code presented in the previous section to implement custom error messages in your applications. The syntax of the statement is shown here.
 
 RAISERROR ({msg_id |msg_str }{,severity ,state }
@@ -831,7 +831,7 @@ END
 
 When an error-producing call is made to the procedure, the custom message is passed to the client.
 
-What is DBCC?
+# What is DBCC?
 DBCC (Database Consistency Checker Commands) is used to check logical and physical consistency of database structure.DBCC statements can fix and detect problems. These statements are grouped in to four categories:-
 
 Maintenance commands like DBCC DBREINDEX, DBCC DBREPAR etc, they are mainly used for maintenance tasks in SQL SERVER.
@@ -848,7 +848,7 @@ Below is a sample screen in which DBCC SHOWCONTIG command is run. DBCC SHOWCONTI
 
 Fragmentation information. If “Scan density” is 100 then everything is contigious.The above image has scan density of 95.36% which is decent percentage. So such type of useful information can be collected by DBCC command and database performance and maintenance can be improved.
 
-What is the purpose of Replication?
+# What is the purpose of Replication?
 Replication is way of keeping data synchronized in multiple databases. SQL server replication has two important aspects publisher and subscriber.
 
 Publisher
@@ -859,7 +859,7 @@ Subscriber
 
 Database Servers that get data from the publishers is called as Subscribers.
 
-What are the different types of replication supported by SQL SERVER?
+# What are the different types of replication supported by SQL SERVER?
 There are three types of replication supported by SQL SERVER:
 
 Snapshot Replication.
@@ -874,18 +874,18 @@ Merge Replication.
 
 Merge replication combines data from multiple sources into a single central database. Again as usual, the initial load is like snapshot but later it allows change of data both on subscriber and publisher, later when they come on-line it detects and combines them and updates accordingly.
 
-What is BCP utility in SQL SERVER?
+# What is BCP utility in SQL SERVER?
 BCP (Bulk Copy Program) is a command line utility by which you can import and export large amounts of data in and out of SQL SERVER database.
 
-What is a Cursor?
+# What is a Cursor?
 A database Cursor is a control which enables traversal over the rows or records in the table. This can be viewed as a pointer to one row in a set of rows. Cursor is very much useful for traversing such as retrieval, addition and removal of database records.
 
-What are local and global variables and their differences?
+# What are local and global variables and their differences?
 Local variables are the variables which can be used or exist inside the function. They are not known to the other functions and those variables cannot be referred or used. Variables can be created whenever that function is called.
 
 Global variables are the variables which can be used or exist throughout the program. Same variable declared in global cannot be used in functions. Global variables cannot be created whenever that function is called.
 
-What is an index?
+# What is an index?
 An Index is one of the most powerful techniques to work with this enormous information. Database tables are not enough for getting the data efficiently in case of a huge amount of data. In order to get the data quickly we need to index the column in a table.
 
 An index is a database object that is created and maintained by the DBMS. Indexed columns are ordered or sorted so that data searching is extremely fast. An index can be applied on a column or a view. A table can have more than one index.
@@ -914,7 +914,7 @@ EmpID EmpName Cell Dept
 
 40001 Black Smith 12345678901 20001
 
-Why do I need an index in a database?
+# Why do I need an index in a database?
 An Index is a database object that can be created on one or more columns (16 max column combinations). When creating the index it will read the column(s) and forms a relevant data structure to minimize the number of data comparisons. The index will improve the performance of data retrieval and add some overhead to the data modification such as create, delete and modify. So it depends on how much data retrieval can be done on table versus how much of DML (Insert, Delete and Update) operations.
 
 Need of Index in Database: An index is basically used for fast data retrieval from the database.
@@ -933,7 +933,7 @@ Clustered index and
 
 Non Clustered index
 
-What is a query in a database?
+# What is a query in a database?
 SQL is a complete data manipulation language that is used not only for database queries, but also to modify and update data in the database. Compared to the complexity of the SELECT statement, which supports SQL queries, the SQL statements that modify and create database contents are somewhat simple.
 
 However, database updates pose some challenges for a DBMS beyond those presented by database queries. The DBMS must protect the integrity of the stored data during changes, ensuring that only valid data is introduced into the database. The DBMS must also coordinate simultaneous updates by multiple users, ensuring that the users and their changes do not interfere with one another.
@@ -1152,7 +1152,7 @@ Table3-
 
 CREATE TABLE Table3 ( ID INT, Name VARCHAR(40) )
 
-What are different types of joins in SQL Server?
+# What are different types of joins in SQL Server?
 Joins are useful for bringing data together from different tables based on their database relations. First we will see how the join operates between tables. Then we will explore the Order of Execution when both a join and a where condition exist. Finally we will move our exploration to the importance of the Join order.
 
 A Join condition defines a way two tables are related in a query by:
@@ -1173,16 +1173,16 @@ Right outer Join
 
 Full Join - A full join is somewhat different from the Cartesian product. A Cartesian product will get all the possible row combinations of the two joining tables. A Full Join takes the matching columns plus all table rows from the left table that does not match the right and all table rows in the right that does not match the left. It applies null for unmatched rows on the other end when doing so. The following example shows the full join between Table_A and Table_C
 
-What is Self-Join?
+# What is Self-Join?
 Self-join is set to be query used to compare to itself. This is used to compare values in a column with other values in the same column in the same table. ALIAS ES can be used for the same table comparison.
 
-What is Cross-Join?
+# What is Cross-Join?
 Cross join defines as Cartesian product where number of rows in the first table multiplied by number of rows in the second table. If suppose, WHERE clause is used in cross join then the query will work like an INNER JOIN.
 
-What is user defined functions?
+# What is user defined functions?
 User defined functions are the functions written to use that logic whenever required. It is not necessary to write the same logic several times. Instead, function can be called or executed whenever needed.
 
-What are all types of user defined functions?
+# What are all types of user defined functions?
 Three types of user defined functions are.
 
 l Scalar Functions.
@@ -1193,12 +1193,12 @@ l Multi statement valued functions.
 
 Scalar returns unit, variant defined the return clause. Other two types return table as a return.
 
-What is collation?
+# What is collation?
 Collation is defined as set of rules that determine how character data can be sorted and compared. This can be used to compare A and, other language characters and also depends on the width of the characters.
 
 ASCII value can be used to compare these character data.
 
-What are all different types of collation sensitivity?
+# What are all different types of collation sensitivity?
 Following are different types of collation sensitivity -.
 
 l Case Sensitivity – A and a and B and b.
@@ -1209,42 +1209,42 @@ l Kana Sensitivity – Japanese Kana characters.
 
 l Width Sensitivity – Single byte character and double byte character.
 
-Advantages and Disadvantages of Stored Procedure?
+# Advantages and Disadvantages of Stored Procedure?
 Stored procedure can be used as a modular programming – means create once, store and call for several times whenever required. This supports faster execution instead of executing multiple queries. This reduces network traffic and provides better security to the data. Disadvantage is that it can be executed only in the Database and utilizes more memory in the database server.
 
-What is Online Transaction Processing (OLTP)?
+# What is Online Transaction Processing (OLTP)?
 Online Transaction Processing or OLTP manages transaction based applications which can be used for data entry and easy retrieval processing of data. This processing makes like easier on simplicity and efficiency. It is faster, more accurate results and expenses with respect to OTLP.
 
 Example – Bank Transactions on a daily basis.
 
-What is CLAUSE?
+# What is CLAUSE?
 SQL clause is defined to limit the result set by providing condition to the query. This usually filters some rows from the whole set of records.
 
 Example – Query that has WHERE condition
 
 Query that has HAVING condition.
 
-What is recursive stored procedure?
+# What is recursive stored procedure?
 A stored procedure which calls by itself until it reaches some boundary condition. This recursive function or procedure helps programmers to use the same set of code any number of times.
 
-What is Union, minus and Interact commands?
+# What is Union, minus and Interact commands?
 UNION operator is used to combine the results of two tables, and it eliminates duplicate rows from the tables.
 
 MINUS operator is used to return rows from the first query but not from the second query. Matching records of first and second query and other rows from the first query will be displayed as a result set.
 
 INTERSECT operator is used to return rows returned by both the queries.
 
-What is an ALIAS command?
+# What is an ALIAS command?
 ALIAS name can be given to a table or column. This alias name can be referred in WHERE clause to identify the table or column.
 
 Example-. 1 Select st.StudentID, Ex.Result from student st, Exam as Ex where st.studentID = Ex. StudentID
 
 Here, st refers to alias name for student table and Ex refers to alias name for exam table.
 
-What is the difference between TRUNCATE and DROP statements?
+# What is the difference between TRUNCATE and DROP statements?
 TRUNCATE removes all the rows from the table, and it cannot be rolled back. DROP command removes a table from the database and operation cannot be rolled back.
 
-What are aggregate and scalar functions?
+# What are aggregate and scalar functions?
 Aggregate functions are used to evaluate mathematical calculation and return single values. This can be calculated from the columns in a table. Scalar functions return a single value based on the input value.
 
 Example -.
@@ -1253,7 +1253,7 @@ Aggregate – max(), count – Calculated with respect to numeric.
 
 Scalar – UCASE(), NOW() – Calculated with respect to strings.
 
-What is an inner join in SQL?
+# What is an inner join in SQL?
 Inner or Self Join - This Join returns a row when there is at least one match in both tables.
 
 Let’s see an example:
@@ -1268,7 +1268,7 @@ Output:
 
 An inner join (sometimes called a "simple join") is a join of two or more tables that returns only those rows that satisfy the join condition.
 
-What is an outer join in SQL?
+# What is an outer join in SQL?
 There are three different types of outer joins; let's see 1 by 1.
 
 • Left Outer Join
@@ -1285,7 +1285,7 @@ Right Outer Join - A RIGHT OUTER JOIN is one of the JOIN operations that allows 
 
 Select * From Table1 Right Outer Join on table1.ID = table2.ID
 
-What is full join in SQL?
+# What is full join in SQL?
 A Full Outer Join fetches all records of both tables; where the record does not match, it returns Null. select e.empId, e.empName, e1.empAdd from emp e full outer join emp_add e1 on e.empI d = e1.empId
 
 Output:
@@ -1309,7 +1309,7 @@ SELECT e.EmployeeID, e.Employee_Name, d.Department_Name FROM employee e(nolock) 
 
 Output:
 
-What is a right join in SQL Server?
+# What is a right join in SQL Server?
 Right JOIN - A RIGHT OUTER JOIN is one of the JOIN operations that allows you to specify a JOIN clause. It preserves the unmatched rows from the Table2 (right) table, joining them with a NULL in the shape of the Table1 (left) table. A LEFT OUTER JOIN B is equivalent to B RIGHT OUTER JOIN A, with the columns in a different order.
 
 Select * From Table1 Right Outer Join on table1.ID = table2.ID
@@ -1322,7 +1322,7 @@ SELECT e.EmployeeID, e.Employee_Name, d.Department_Name FROM employee e(nolock) 
 
 Output:
 
-What is database engine in SQL Server?
+# What is database engine in SQL Server?
 The SQL Server Database Engine, SQL Server Agent, and several other SQL Server components run as services. These services typically are started when the operating system starts. This depends on what is specified during setup; some services are not started by default.
 
 A service is a type of application (executable) that runs in the system background. Services usually provide core operating system features, such as Web serving, event logging, or file serving. Services can run without showing a user interface on the computer desktop. The SQL Server Database Engine, SQL Server Agent, and several other SQL Server components run as services. These services typically are started when the operating system starts. This depends on what is specified during setup; some services are not started by default.
@@ -1331,7 +1331,7 @@ This describes the management of the various SQL Server services on your machine
 
 Let's start now, select start/All Programs/Microsoft SQL Server2005/Configuration Tools/SQL Server Configuration Manager.
 
-What are the Analysis Services in SQL Server?
+# What are the Analysis Services in SQL Server?
 The purpose of analysis services is to turn data into information and to provide quick and easy access to that information for decision makers. SSAS provides OLAP by letting you design, create and manage multidimensional structures that contain data aggregated from other data sources, such as relational databases and provides many data mining algorithms for mining data from data sources. So for delivering OLAP and data mining it uses client and server technologies.
 
 The main idea of SSAS is to provide fast results from data sources when we apply a query because in order to make a decision we need data of various dimensions.
@@ -1342,7 +1342,7 @@ Server Architecture: This runs as a Windows service. The Msmdsrv.exe application
 
 Client Architecture: SSAS has a thin client Component Architecture. All queries and calculations are resolved by the server only. So for each request a server to client connection is required. There are several providers with SSAS to support various programming languages. These providers communicate using SOAP packets. You can better understand this by the following diagram:
 
-What are the integration services in SQL Server?
+# What are the integration services in SQL Server?
 Integration Services is a platform for building high performance data integration and workflow solutions, including extraction, transformation and loading (ETL) operations for data warehousing.
 
 This includes graphical tools and wizards for building and debugging packages.
@@ -1371,7 +1371,7 @@ Some important components to using Integration Services:
 
 • Other tools, wizards and command prompt utilities
 
-What are the data quality services in SQL Server?
+# What are the data quality services in SQL Server?
 SQL Server Data Quality Services - SQL Server 2012 Data Quality Services (DQS) is the data quality product from Microsoft SQL Server 2012. DQS enables you to perform a variety of critical data quality tasks, including correction, enrichment, standardization and de-duplication of your data.
 
 DQS provides the following features to resolve data quality issues:
@@ -1394,7 +1394,7 @@ DQS_PROJECTS includes data that is required for Knowledge Base management and DQ
 
 DQS_STAGING_DATA provides an intermediate staging database where you can copy source data to perform DQS operations, and then export your processed data.
 
-What are the reporting services in SQL Server?
+# What are the reporting services in SQL Server?
 SQL Server Reporting Services is a comprehensive reporting platform that includes processing components. Processing components are the basis for the multilayered architecture of SQL Server Reporting Services. Processing components interact with each other to retrieve data and deliver a report. S QL Server Reporting Services has the following two basic components:
 
 • Processors
@@ -1415,7 +1415,7 @@ Tools and Components of SQL Server Reporting Services architecture: This archite
 
 • Data sources
 
-What are the master data services in SQL Server?
+# What are the master data services in SQL Server?
 The goal of MDS is to address the challenges of both operational and analytical master data management by providing a master data hub to centrally organize, maintain, and manage your master data. This master data hub supports these capabilities with a scalable and extensible infrastructure built on SQL Server and the Windows Communication Foundation (WCF) APIs.
 
 Master Data Services Components: The wizard installs Master Data Services Configuration Manager, installs the files necessary to run the Master Data Services Web service, and registers assemblies. After installation, you use the Master Data Services Configuration Manager to create and configure a Master Data Services database in a SQL Server instance that you specify, create the Master Data Services Web application, and enable the Web service.
@@ -1426,7 +1426,7 @@ Model Objects: Most activities in MDS revolve around models and the objects they
 
 Master Data Maintenance: Master Data Manager is more than a place to define model objects. It also allows you to create, edit, and update leaf members and consolidated members. When you add a leaf member, you initially provide values for only the Name and Code attributes, as shown in Figure 7-4. You can also use a search button to locate and select the parent consolidated member in each hierarchy.
 
-What is replication in SQL Server?
+# What is replication in SQL Server?
 Replication is a process or method to synchronize the data across multiple servers. Replication is done by a replica set. A replication maintains the same data set. Replica sets provide redundancy and high availability with multiple copies of data on different database servers.
 
 Replication removes dependencies from a single server so replication protects a database from the loss of a single server. Replication provides a mechanism to recover from hardware failure and service interruptions.
@@ -1441,7 +1441,7 @@ Step 2: Right-click on Local Publications and click on New publication.
 
 Step 3: After clicking on the new publication tab the following window will appear and click on the “Next” button.
 
-How to I select data from an SQL Server table?
+# How to I select data from an SQL Server table?
 How to select specific rows or all columns, selecting distinct rows, filtering with where clause, sorting rows using orderby and so on. We will be using the AdventureWorks2012 database for this demo.
 
 To select all the rows and columns from a table, we use the following query:
@@ -1485,7 +1485,7 @@ exec sp_help emp
 
 Output:
 
-What is a default in SQL?
+# What is a default in SQL?
 Constraints are rules that decide what kind of data can enter into the database tables. SQL server has six types of constraints and we will explore all these constraints here with suitable examples. The constraints that we are going to explore are listed below:
 
 Primary Key Constraint
@@ -1514,7 +1514,7 @@ Let us set the Default value of 1 for the Class. Here are the steps:
 
 • At the bottom of the layout, you will see Column properties.
 
-How to create a database using SQL?
+# How to create a database using SQL?
 A database is described as an organized way of collection of DATA. It is the collection of schemes, tables, queries, reports, views and other objects.
 
 Syntax: CREATEDATABASEDatabaseName
@@ -1523,7 +1523,7 @@ Example: CREATEDATABASE Student
 
 Or you can create Database through Design/ Wizard form by right clicking on DATABASE option - New Database
 
-What is a constraint in SQL?
+# What is a constraint in SQL?
 Constraints are the rules that decide what kind of data can enter into the database tables. SQL server has six types of constraints and we will explore all these constraints here with suitable examples. The constraints that we are going to explore are listed below:
 
 Primary Key Constraint
@@ -1572,21 +1572,21 @@ Default value for the column is set only when the row is created for the first t
 
 • At the bottom of the layout, you will see a Column properties as shown in the below picture. Set the default as shown below:
 
-What is data Integrity?
+# What is data Integrity?
 Data Integrity defines the accuracy and consistency of data stored in a database. It can also define integrity constraints to enforce business rules on the data when it is entered into the application or database.
 
-What is Auto Increment?
+# What is Auto Increment?
 Auto increment keyword allows the user to create a unique number to be generated when a new record is inserted into the table. AUTO INCREMENT keyword can be used in Oracle and IDENTITY keyword can be used in SQL SERVER. Mostly this keyword can be used whenever PRIMARY KEY is used.
 
-What is the difference between Cluster and Non-Cluster Index?
+# What is the difference between Cluster and Non-Cluster Index?
 Clustered index is used for easy retrieval of data from the database by altering the way that the records are stored. Database sorts out rows by the column which is set to be clustered index.
 
 A nonclustered index does not alter the way it was stored but creates a complete separate object within the table. It point back to the original table rows after searching.
 
-What is Datawarehouse?
+# What is Datawarehouse?
 Datawarehouse is a central repository of data from multiple sources of information. Those data are consolidated, transformed and made available for the mining and online processing. Warehouse data have a subset of data called Data Marts.
 
-How do I define constraints in SQL?
+# How do I define constraints in SQL?
 Constraints are rules and restrictions applied on a column or a table such that unwanted data can't be inserted into tables. This ensures the accuracy and reliability of the data in the database. We can create constraints on single or multiple columns of any table.
 
 Constraints maintain the data integrity and accuracy in the table.
@@ -1647,7 +1647,7 @@ First right-click on the table and select and click on the design option. Now ch
 
 Check Constraint - A Check constraint checks for a specific condition before inserting data into a table. If the data passes all the Check constraints then the data will be inserted into the table otherwise the data for insertion will be discarded. The CHECK constraint ensures that all values in a column satisfies certain conditions.
 
-What is the meaning of Not Null in SQL?
+# What is the meaning of Not Null in SQL?
 Constraints are rules that decide what kind of data can enter into the database tables. SQL server has six types of constraints and we will explore all these constraints here with suitable examples. The constraints that we are going to explore are listed below:
 
 • Primary Key Constraint
@@ -1670,7 +1670,7 @@ Remove the check mark as shown in the picture below. This action will enable the
 
 Example:
 
-How to alter a table schema in SQL Server?
+# How to alter a table schema in SQL Server?
 Altering Tables: It is used to modify an existing table.
 
 CREATE TABLE Stock ( ID SMALLINT ); mysql > ALTER TABLE Stock -
@@ -1685,7 +1685,7 @@ mysql > ALTER TABLE Stock;
 
 Example in Sql:
 
-How to create index in SQL Server?
+# How to create index in SQL Server?
 Indexes are data structures that are used to improve the searching speed in a table. The user can not see the index directly. An index increases the performance of select statements and where clausees and slows down insert and update statements. So we create indexes only for those columns that are not frequently updated.
 
 Creation of index: Example: create index i_select on emp(empName)
@@ -1798,7 +1798,7 @@ dd mon yyyy hh:mi:ss:mmmAM
 
 dd/mm/yy hh:mi:ss:mmmAM
 
-What is ACID fundamental? What are transactions in SQL SERVER?
+# What is ACID fundamental? What are transactions in SQL SERVER?
 A transaction is a sequence of operations performed as a single logical unit of work. A logical unit of work must exhibit four properties, called the ACID (Atomicity, Consistency, Isolation, and Durability) properties, to qualify as a transaction: Atomicity
 
 • A transaction must be an atomic unit of work; either all of its data modifications are performed or none of them is performed. Consistency
@@ -1868,16 +1868,16 @@ l GROUP BY is used to create unique combinations of a list of columns that can b
 Compare SQL & PL/SQL
 Criteria SQL PL/SQL
 
-What it is Single query or command execution Full programming language
+# What it is Single query or command execution Full programming language
 What it comprises Data source for reports, web pages Application language to build, format and display report, web pages Characteristic Declarative in nature Procedural in nature Used for Manipulating data Creating applications
 
-What is BCP? When is it used?
+# What is BCP? When is it used?
 It is a tool used to duplicate enormous quantity of information from tables and views. It does not facsimile the structures same as foundation to target. BULK INSERT command helps to bring in a data folder into a record, table or view in a user-specific arrangement.
 
-When is the UPDATE_STATISTICS command used?
+# When is the UPDATE_STATISTICS command used?
 This command is used, ones the processing of large data is done. When we delete a large number of files, alteration or reproduction takes place in the tables, to be concerned of these changes we need to restructure the indexes This is done UPDATE_STATISTICS.
 
-Explain the steps needed to Create the scheduled job?
+#Explain the steps needed to Create the scheduled job?
 Steps to create a Scheduled Job :
 
 Connect to the database of SQL server in SQL Server Management Studio. On the SQL Server Agent, we will find a Jobs folder.
@@ -1890,7 +1890,7 @@ Click next on the “Steps” in the left list of options. An SQL job can have m
 
 Click on the “Schedules” in the left list of options. An SQL job can comprise of one or supplementary schedules. It is basically the instance at which SQL job will jog itself. We can spell out returning schedules also.
 
-When are we going to use truncate and delete?
+# When are we going to use truncate and delete?
 TRUNCATE is a DDL command, whereas DELETE is a DML command.
 
 We can’t execute a trigger in case of TRUNCATE whilst with DELETE, we can accomplish a trigger.
@@ -1899,7 +1899,7 @@ TRUNCATE is quicker than DELETE, for the reason that when we use DELETE to delet
 
 We can use any condition in WHERE clause using DELETE but it is not possible with TRUNCATE.5.If a table is referenced by any foreign key constraints, then TRUNCATE won’t work.
 
-Explain correlated query work?
+# Explain correlated query work?
 It’s most important to be attentive of the arrange of operations in an interrelated subquery.
 
 First, a row is processed in the outer doubt.
@@ -1911,14 +1911,14 @@ It will persist in anticipation of the “WHERE (1) = (… )” state is pleased
 When is the Explicit Cursor Used ?
 If the developer needs to perform the row by row operations for the result set containing more than one row, then he unambiguously declares a pointer with a name. They are managed by OPEN, FETCH and CLOSE.%FOUND, %NOFOUND, %ROWCOUNT and %ISOPEN characteristics are used in all types of pointers.
 
-Find What is Wrong in this Query?
+# Find What is Wrong in this Query?
 SELECT subject_code, AVG (marks) FROM students WHERE AVG(marks) > 75 GROUP BY subject_code;
 
 The WHERE clause cannot be used to restrict groups. Instead, the HAVING clause should be used.
 
 SELECT subject_code, AVG (marks) FROM students HAVING AVG(marks) > 75 GROUP BY subject_code;
 
-Write the Syntax for STUFF function in an SQL server?
+# Write the Syntax for STUFF function in an SQL server?
 STUFF (String1, Position, Length, String2)
 
 String1 - String to be overwritten
@@ -1954,7 +1954,7 @@ l SUBSTRING( textData, startPosition, length ) – Returns portion of the string
 
 l UPPER( character_expression ) – Returns a character expression with lowercase character data converted to uppercase.
 
-What are the three ways that Dynamic SQL can be executed?
+# What are the three ways that Dynamic SQL can be executed?
 l Writing a query with parameters.
 
 l Using EXEC.
@@ -1966,12 +1966,12 @@ l Synonyms enable the reference of another object (View, Table, Stored Procedure
 
 l Synonyms can offer a great deal of value when converting underlying database objects without breaking front end or middle tier code. This could be useful during a re-architecture or upgrade project.
 
-If you are a SQL Developer, how can you delete duplicate records in a table with no primary key?
+# If you are a SQL Developer, how can you delete duplicate records in a table with no primary key?
 Use the SET ROWCOUNT command. For instance,
 
 if you have 2 duplicate rows, you would SET ROWCOUNT 1, execute DELETE command and then SET ROWCOUNT 0.
 
-Is it possible to import data directly from T-SQL commands without using SQL Server Integration Services? If so, what are the commands?
+# Is it possible to import data directly from T-SQL commands without using SQL Server Integration Services? If so, what are the commands?
 Yes, six commands are available to import data directly in the T-SQL language. These commands include :
 
 l BCP : The bulk copy (bcp) command of Microsoft SQL Server provides you with the ability to insert large numbers of records directly from the command line. In addition to being a great tool for command-line aficionados, bcp is a powerful tool for those seeking to insert data into a SQL Server database from within a batch file or other programmatic method.
@@ -1986,29 +1986,29 @@ l OPENQUERY : Executes the specified pass-through query on the specified linked 
 
 l Linked Servers : Configure a linked server to enable the SQL Server Database Engine to execute commands against OLE DB data sources outside of the instance of SQL Server. Typically linked servers are configured to enable the Database Engine to execute a Transact-SQL statement that includes tables in another instance of SQL Server, or another database product such as Oracle.
 
-What is the native system stored procedure to execute a command against all databases?
+# What is the native system stored procedure to execute a command against all databases?
 l The sp_MSforeachdb system stored procedure accepts the @Command parameter which can be exetecuted against all databases. The ‘?’ is used as a placeholder for the database name to execute the same command.
 
 l The alternative is to use a cursor to process specific commands against each database.
 
-How can a SQL Developer prevent T-SQL code from running on a production SQL Server?
+# How can a SQL Developer prevent T-SQL code from running on a production SQL Server?
 Use IF logic with the @@SERVERNAME function compared against a string with a RETURN command before any other logic.
 
-How do you maintain database integrity where deletions from one table will automatically cause deletions in another table?
+# How do you maintain database integrity where deletions from one table will automatically cause deletions in another table?
 You can create a trigger that will automatically delete elements in the second table when elements from the first table are removed.
 
-What port does SQL server run on?
+# What port does SQL server run on?
 1433 is the standard port for SQL server.
 
-What is the SQL CASE statement used for? Explain with an example?
+# What is the SQL CASE statement used for? Explain with an example?
 It allows you to embed an if-else like clause in the SELECT clause.
 
 SELECT Employee_Name, CASE Location WHEN 'alex' THEN Bonus * 2 WHEN 'robin' THEN Bonus *, 5 ELSE Bonus END "New Bonus" FROM Intellipaat_employee;
 
-What are the risks of storing a hibernate-managed object in cache? How do you overcome the problems?
+# What are the risks of storing a hibernate-managed object in cache? How do you overcome the problems?
 The primary problem here is that the object will outlive the session it came from. Lazily loaded properties won’t get loaded if needed later. To overcome the problem, perform cache on the object’s id and class and then retrieve the object in the current session context.
 
-When is the use of UPDATE_STATISTICS command ?
+# When is the use of UPDATE_STATISTICS command ?
 Updating statistics ensures that queries compile with up-to-date statistics. However, updating statistics causes queries to recompile. We recommend not updating statistics too often because there is a performance tradeoff between improving query plans and the time it takes to recompile queries. The specific tradeoffs depend on your application. UPDATE STATISTICS can use tempdb to sort the sample of rows for building statistics.
 
 Syntax: UPDATE STATISTICS table_or_indexed_view_name
@@ -2029,20 +2029,20 @@ Syntax: UPDATE STATISTICS table_or_indexed_view_name
 
 [ PAGECOUNT = numeric_contant ]
 
-What is SQL Profiler?
+# What is SQL Profiler?
 Microsoft SQL Server Profiler is a graphical user interface to SQL Trace for monitoring an instance of the Database Engine or Analysis Services. You can capture and save data about each event to a file or table to analyze later.
 
-Use SQL Profiler to monitor only the events in which you are interested.
+# Use SQL Profiler to monitor only the events in which you are interested.
 
 If traces are becoming too large, you can filter them based on the information you want, so that only a subset of the event data is collected. Monitoring too many events adds overhead to the server and the monitoring process and can cause the trace file or trace table to grow very large, especially when the monitoring process takes place over a long period of time.
 
-What command using Query Analyzer will give you the version of SQL server and operating system?
+#What command using Query Analyzer will give you the version of SQL server and operating system?
 SELECT SERVERPROPERTY (‘productversion’), SERVERPROPERTY (‘productlevel’), SERVERPROPERTY (‘edition’).
 
-What does it mean to have QUOTED_IDENTIFIER ON? What are the implications of having it OFF?
+#What does it mean to have QUOTED_IDENTIFIER ON? What are the implications of having it OFF?
 When SET QUOTED_IDENTIFIER is ON, identifiers can be delimited by double quotation marks, and literals must be delimited by single quotation marks. When SET QUOTED_IDENTIFIER is OFF, identifiers cannot be quoted and must follow all Transact-SQL rules for identifiers.
 
-What is the STUFF function and how does it differ from the REPLACE function in SQL?
+# What is the STUFF function and how does it differ from the REPLACE function in SQL?
 Stuff function : This function is used to replace string from the given start position, passed as 2nd argument with string passed as last argument. In Stuff function, 3rd argument defines the number of characters which are going to be replaced.
 
 Syntax : STUFF ( character_expression , start , length , replaceWith_expression )
@@ -2059,12 +2059,12 @@ For example : Select Replace ('Abcabcabc', 'bc', 'xy')
 
 This query will return the string Axyaxyaxy. In this example, Replace function replaces the occurrence of each 'bc' string with 'xy'.
 
-How to get @@ERROR and @@ROWCOUNT at the same time?
+# How to get @@ERROR and @@ROWCOUNT at the same time?
 If @@Rowcount is checked after Error checking statement then it will have 0 as the value of @@Recordcount as it would have been reset. And if @@Recordcount is checked before the error-checking statement then @@Error would get reset. To get @@error and @@rowcount at the same time do both in same statement and store them in local variable.
 
 SELECT @RC = @@ROWCOUNT, @ER = @@ERROR
 
-What is de-normalization in SQL database administration? Give examples
+# What is de-normalization in SQL database administration? Give examples
 De-normalization is used to optimize the readability and performance of the database by adding redundant data. It covers the inefficiencies in the relational database software.
 
 De-normalization logical data design tend to improve the query responses by creating rules in the database which are called as constraints.
@@ -2079,14 +2079,14 @@ l Linking attribute of one relation with other relations.
 
 l To improve the performance and scalability of web applications.
 
-Can you explain about buffer cash and log Cache in SQL Server?
+# Can you explain about buffer cash and log Cache in SQL Server?
 l Buffer Cache : Buffer cache is a memory pool in which data pages are read. The ideal performance of the buffer cache is indicated as: 95% indicates that pages that were found in the memory are 95% of time. Another 5% is need physical disk access.
 
 If the value falls below 90%, it is the indication of more physical memory requirement on the server.
 
 l Log Caches : Log cache is a memory pool used to read and write the log pages. A set of cache pages are available in each log cache. The synchronization is reduced between log and data buffers by managing log cache separately from the buffer cache.
 
-Describe how to use Linked Server.
+# Describe how to use Linked Server.
 MS SQL Server supports the connection to different OLE DB on an ad hoc basis. This persistent connection is referred as Linked Server.
 
 Following are the steps to use Linked Server for any OLE DB. You can refer this to use an MS-Excel workbook.
@@ -2113,7 +2113,7 @@ o Type the Excel version no. (7.0, 8.0 etc) in the Provider String. Use Excel 8.
 
 o To create a linked server click on OK.
 
-Explain how to send email from SQL database.
+# Explain how to send email from SQL database.
 SQL Server has a feature for sending mails. Stored procedures can also be used for sending mail on demand. With SQL Server 2005, MAPI client is not needed for sending mails.
 
 The following is the process for sending emails from database.
@@ -2134,7 +2134,7 @@ l @subject = 'This mail was sent using Database Mail' ;
 
 GO
 
-How to make remote connection in database?
+# How to make remote connection in database?
 The following is the process to make a remote connection in database :
 
 Use SQL Server Surface Area Configuration Tool for enabling the remote connection in database.
@@ -2147,7 +2147,7 @@ Select the radio button: Local and Remote Connections and select ‘Using TCP/IP
 
 Click on OK button / Apply button
 
-What is the purpose of OPENXML clause SQL server stored procedure?
+# What is the purpose of OPENXML clause SQL server stored procedure?
 OPENXML parses the XML data in SQL Server in an efficient manner. It’s primary ability is to insert XML data to the RDB. It is also possible to query the data by using OpenXML. The path of the XML element needs to be specified by using ‘xpath’.
 
 The following is a procedure for retrieving xml data:
@@ -2170,7 +2170,7 @@ The above code snippet results the following:
 
 15202 xyz 9342673212
 
-How to store pdf file in SQL Server?
+# How to store pdf file in SQL Server?
 Create a column as type ‘blob’ in a table. Read the content of the file and save in ‘blob’ type column in a table.
 
 Or
@@ -2196,22 +2196,22 @@ AS
 
 SELECT sum(salary) FROM employee WHERE emp_dept LIKE Develop
 
-What is lock escalation?
+# What is lock escalation?
 Lock escalation is used to convert row locks and page locks into table locks thereby “escalating” the smaller or finer locks. This increases the system performance as each lock is nothing but a memory structure. Too many locks would mean more consumption of memory. Hence, escalation is used.
 
 Lock escalation from SQL Server 7.0 onwards is dynamically managed by SQL Server. It is the process of converting a lot of low level locks into higher level locks.
 
-What is Failover clustering overview?
+# What is Failover clustering overview?
 Failover clustering is mainly used for data availability. Typically, in a failover cluster, there are two machines.
 
 l One machine provides the basic services and the second is available to run the service when the primary system fails.
 
 l The primary system is monitored periodically to check if it works. This monitoring may be performed by the failover computer or an independent system also called as cluster controller. In an event of failure of primary computer, the failover system takes control.
 
-What is Builtin/Administrator?
+# What is Builtin/Administrator?
 The Builtin/Administrator account is basically used during some setup to join some machine in the domain. It should be disabled immediately thereafter. For any disaster recovery, the account will be automatically enabled. It should not be used for normal operations.
 
-What XML support does the SQL server extend?
+# What XML support does the SQL server extend?
 SQL Server (server-side) supports 3 major elements :
 
 Creation of XML fragments: This is done from the relational data using FOR XML to the select query.
@@ -2228,7 +2228,7 @@ l Creation of XML Templates : allows creation of dynamic sections in XML.
 
 SQL server can return XML document using FOR XML clause. XML documents can be added to SQL Server database and you can use the OPENXML clause to display the data from the document as a relational result set. SQL Server 2000 supports XPath queries.Get to know more about SQL Techniques that can help you grow in your career.
 
-Difference between Primary Key and Foreign Key
+# Difference between Primary Key and Foreign Key
 Primary key uniquely identify a record in the table. Foreign key is a field in the table that is primary key in another table. Primary Key can't accept null values. Foreign key can accept multiple null value. By default, Primary key is clustered index and data in the database table is physically organized in the sequence of clustered index. Foreign key do not automatically create an index, clustered or non-clustered. You can manually create an index on foreign key. We can have only one Primary key in a table. We can have more than one foreign key in a table.
 
 Primary Key:
@@ -2243,7 +2243,7 @@ Foreign Key l Foreign key is a field in the table that is primary key in another
 
 l Having a null foreign key is usually a bad idea. In the example below, the record in [dbo].[child] is what would be referred to as an "orphan record". Think long and hard before doing this.
 
-SQL Queries
+#SQL Queries
 SQL Query to find second highest salary of Employee
 There are many ways to find second highest salary of Employee in SQL, you can either use SQL Join or Subquery to solve this problem. Here is SQL query using Subquery:
 
@@ -2258,7 +2258,7 @@ Method 3:
 
 select MAX(Salary) from Employee WHERE Salary NOT IN (select MAX(Salary) from Employee );
 
-SQL Query to find Max Salary from each department.
+# SQL Query to find Max Salary from each department.
 You can find the maximum salary for each department by grouping all records by DeptId and then using MAX() function to calculate maximum salary in each group or each department.
 
 SELECT DeptID, MAX(Salary) FROM Employee GROUP BY DeptID.
@@ -2269,10 +2269,10 @@ SELECT DeptName, MAX(Salary) FROM Employee e RIGHT JOIN Department d ON e.DeptId
 
 In this query, we have used RIGHT OUTER JOIN because we need the name of the department from Department table which is on the right side of JOIN clause, even if there is no reference of dept_id on Employee table.
 
-Write SQL Query to display the current date.
+# Write SQL Query to display the current date.
 SQL has built-in function called GetDate() which returns the current timestamp. This will work in Microsoft SQL Server, other vendors like Oracle and MySQL also has equivalent functions. SELECT GetDate();
 
-Write an SQL Query to check whether date passed to Query is the date of given format or not.
+# Write an SQL Query to check whether date passed to Query is the date of given format or not.
 SQL has IsDate() function which is used to check passed value is a date or not of specified format, it returns 1(true) or 0(false) accordingly. Remember ISDATE()is an MSSQL function and it may not work on Oracle, MySQL or any other database but there would be something similar.
 
 SELECT ISDATE('1/08/13') AS "MM/DD/YY";
@@ -2284,19 +2284,19 @@ This SQL query is tricky, but you can use BETWEEN clause to get all records whos
 
 SELECT DISTINCT EmpName FROM Employees WHERE DOB BETWEEN ‘01/01/1960’ AND ‘31/12/1975’;
 
-Write an SQL Query find number of employees according to gender whose DOB is between 01/01/1960 to 31/12/1975.
+# Write an SQL Query find number of employees according to gender whose DOB is between 01/01/1960 to 31/12/1975.
 SELECT COUNT(*), sex from Employees WHERE DOB BETWEEN '01/01/1960' AND '31/12/1975' GROUP BY sex;
 
-Write an SQL Query to find an employee whose Salary is equal or greater than 10000.
+# Write an SQL Query to find an employee whose Salary is equal or greater than 10000.
 SELECT EmpName FROM Employees WHERE Salary>=10000;
 
-Write an SQL Query to find name of employee whose name Start with ‘M’
+# Write an SQL Query to find name of employee whose name Start with ‘M’
 SELECT * FROM Employees WHERE EmpName like 'M%';
 
-find all Employee records containing the word "Joe", regardless of whether it was stored as JOE, Joe, or joe.
+# find all Employee records containing the word "Joe", regardless of whether it was stored as JOE, Joe, or joe.
 SELECT * from Employees WHERE UPPER(EmpName) like '%JOE%';
 
-Write an SQL Query to find the year from date.
+# Write an SQL Query to find the year from date.
 Here is how you can find Year from a Date in SQL Server 2008
 
 SELECT YEAR(GETDATE()) as "Year";
