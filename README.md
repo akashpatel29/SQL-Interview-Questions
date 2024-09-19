@@ -574,7 +574,7 @@ SELECT SCOPE_IDENTITY() -- It returns value 1 this was inserted by insert query 
 
 SELECT IDENT_CURRENT('SAMPLE2') -- It returns value inserted in SAMPLE2 table
 
-# Difference between char varchar and nvarchar in sql server
+# Difference between char varchar and varchar in sql server
 Char DataType
 
 Char datatype which is used to store fixed length of characters. Suppose if we declared char(50) it will allocates memory for 50 characters. Once we declare char(50) and insert only 10 characters of word then only 10 characters of memory will be used and other 40 characters of memory will be wasted.
