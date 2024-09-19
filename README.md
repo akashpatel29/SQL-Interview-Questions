@@ -105,7 +105,7 @@ A correlated subquery cannot be considered as independent query, but it can refe
 
 A Non-Correlated sub query can be considered as independent query and the output of subquery are substituted in the main query.
 
-# How to create a table in SQL?
+## How to create a table in SQL?
 SQL provides an organized way for table creation.
 
 Syntax: Create table TableName (columnName1 datatype, columnName2 datatype )
@@ -334,7 +334,7 @@ When we insert, update or delete in a table in a database then the following mes
 Why and when to use a trigger:
 We use a trigger when we want some event to happen automatically on certain desirable scenarios. You have a table that changes frequently, now you want to know how many times and when these changes take place. In that case you can create a trigger that will insert the desired data into another table whenever any change in the main table occurs.
 
-In SQL Server we can create the following 3 types of triggers:
+# In SQL Server we can create the following 3 types of triggers:
 
 • Data Definition Language (DDL) triggers
 
