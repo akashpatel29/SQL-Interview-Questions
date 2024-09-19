@@ -1127,7 +1127,7 @@ COMMIT now when you fire the select query, you'll get records up to ID 6.
 
 In this, we have seen the types of commands in SQL Server and done some overview of that. We have also seen how to commit transactions and how to roll back any transaction to any saved point.
 
-What is a join in SQL Server?
+# What is a join in SQL Server?
 If you want to retrieve data from multiple tables then you need to use joins in SQL Server. Joins are used to get data from two or more tables based on the relationships among some of the columns in the tables.
 
 Syntax: The Inner join syntax is as follows:
