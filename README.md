@@ -946,7 +946,7 @@ Insert into table_Name(column names) values(Values for column).
 
 INSERT INTO employee(ID, SURNAME, FIRSTNAME, EMAIL, COUNTRY, PHONE) VALUES(111, 'vithal', 'wadje', 'vithal.wadje@yahoo.com', 'India', ' +914545455454')
 
-What are query types in a database?
+# What are query types in a database?
 Types of Commands in SQL ServerThese commands are categorized into:
 
 • DDL
