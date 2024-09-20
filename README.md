@@ -237,7 +237,7 @@ A Stored Procedure is a collection or a group of T-SQL statements. Stored Proced
 # Why we use Stored Procedure
 There are several reasons to use a Stored Procedure. They are a network load reducer and decrease execution time because they are precompiled. The most important use of a Stored Procedure is for security purposes. They can restrict SQL Injection. We can avoid SQL injection by use of a Stored Procedure.
 
-# How to create a Stored Procedure
+# How to create a Stored Procedure?
 CREATE PROCEDURE spEmployee AS
 
 BEGIN
