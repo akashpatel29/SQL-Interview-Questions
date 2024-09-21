@@ -84,6 +84,7 @@ RDBMS: It is referred as Relation Database Management Systems (RDBMS). RDBMS pos
 # What is a database table?
 Database table: Table contains records in the form of rows and columns. A permanent table is created in the database you specify and remains in the database permanently, until you delete it.
 
+
 Syntax:
 
 Create table TableName (ID INT, NAME VARCHAR(30) )
@@ -122,7 +123,7 @@ Delete Data Record from Database Table and deleting an existing table by the fol
 
 Syntax: To delete all table records of a table:
 
-Delete TableName DELETE info
+Delete Table Name DELETE info
 
 # How to update a database table using SQL?
 To update an existing Table we use SQL Command UPDATE: It will update the records as per user defined query/need.
