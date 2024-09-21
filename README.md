@@ -6,7 +6,6 @@
 A database is described as an organized way of collection of DATA. It is the collection of schemes, tables, queries, reports, views and other objects.
 
 Syntax: CREATEDATABASEDatabaseName
-
 Example: CREATEDATABASE Student
 
 or you can Create Database through Design/ Wizard form by right clicking on DATABASE option-New Database.
