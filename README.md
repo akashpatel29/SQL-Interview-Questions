@@ -180,7 +180,7 @@ Syntax: CREATE TABLE table_name(Col1 datatype NOT NULL, Col2 datatype NOT NULL, 
 
 AT SINGLE COLUMN LEVEL
 
-# What is database normalization?
+# What is database normalization ?
 Database normalization is the process of organizing the fields and tables of a relational database to minimize redundancy and dependency. Normalization usually involves dividing large tables into smaller (and less redundant) tables and defining relationships among them. Normalization is a bottom-up technique for database design.
 
 The evolution of Normalization theories is illustrated below:
