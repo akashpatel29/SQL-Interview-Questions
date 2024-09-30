@@ -228,7 +228,7 @@ Fourth Normal Form (3NF):
 
 Meeting all the requirements of third normal form and it should not have multi- valued dependencies.
 
-# What is Denormalization.
+# What is Denormalization?
 DeNormalization is a technique used to access the data from higher to lower normal forms of database. It is also process of introducing redundancy into a table by incorporating data from the related tables.
 
 # What is a stored procedure?
