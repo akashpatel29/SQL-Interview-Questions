@@ -1297,7 +1297,7 @@ Full Outer Join - FULL OUTER JOIN: This JOIN is a combination of both. All recor
 
 Select * From Table1 Full Outer Join on table1.ID = table2.ID
 
-What is left join in SQL Server?
+#What is left join in SQL Server?
 Left Join: A LEFT OUTER JOIN is one of the JOIN operations that allow you to specify a join clause. It preserves the unmatched rows from the first (left) table, joining them with a NULL row in the shape of the second (right) table.
 
 Select * From Table1 Left Outer Join on table1.ID=table2.ID
