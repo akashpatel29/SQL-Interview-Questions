@@ -2034,7 +2034,7 @@ Syntax: UPDATE STATISTICS table_or_indexed_view_name
 # What is SQL Profiler?
 Microsoft SQL Server Profiler is a graphical user interface to SQL Trace for monitoring an instance of the Database Engine or Analysis Services. You can capture and save data about each event to a file or table to analyze later.
 
-# Use SQL Profiler to monitor only the events in which you are interested.
+# Use SQL Profiler to monitor only the events in which you are interested?
 
 If traces are becoming too large, you can filter them based on the information you want, so that only a subset of the event data is collected. Monitoring too many events adds overhead to the server and the monitoring process and can cause the trace file or trace table to grow very large, especially when the monitoring process takes place over a long period of time.
 
