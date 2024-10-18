@@ -1448,6 +1448,7 @@ Step 3: After clicking on the new publication tab the following window will appe
 How to select specific rows or all columns, selecting distinct rows, filtering with where clause, sorting rows using orderby and so on. We will be using the AdventureWorks2012 database for this demo.
 
 To select all the rows and columns from a table, we use the following query:
+
 SELECT * FROM HumanResources.Employee
 
 Execute the query by pressing F5 or via the execute button.
