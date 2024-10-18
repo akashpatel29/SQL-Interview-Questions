@@ -1417,6 +1417,7 @@ Tools and Components of SQL Server Reporting Services architecture: This archite
 
 • Data sources
 
+
 # What are the master data services in SQL Server?
 The goal of MDS is to address the challenges of both operational and analytical master data management by providing a master data hub to centrally organize, maintain, and manage your master data. This master data hub supports these capabilities with a scalable and extensible infrastructure built on SQL Server and the Windows Communication Foundation (WCF) APIs.
 
