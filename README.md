@@ -622,7 +622,7 @@ TRUNCATE table does not invoke trigger.
 
 I had mentioned that TRUNCATE table can not be rolled back while delete can be.
 
-If locking is not implemented, what issues can occur?
+#If locking is not implemented, what issues can occur?
 Following are the problems that occur if you do not implement locking properly in SQLSERVER.
 
 Lost Updates
