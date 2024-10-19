@@ -63,7 +63,7 @@ PL/SQL: It is referred as Procedure Language / Structure Query Language:
 
 • In PL/SQL you can execute a block of code not a single line of code.
 
-• Deep control statements
+• Deep control statements.
 
 • It can run in UNIX also.
 
