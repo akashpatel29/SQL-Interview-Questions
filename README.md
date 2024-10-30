@@ -1,4 +1,4 @@
-## SQL-Interview-Questions
+## SQL Interview Questions
 
 # SQL Server
 
