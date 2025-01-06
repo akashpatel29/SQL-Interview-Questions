@@ -157,6 +157,7 @@ Many to Many Relationship:
 The third table acts as a bridge between the tables that want to establish a Many to Many relationship. The bridge table stores the common information between Many to Many relationship tables. Have a look at the following diagram:
 
 # What is a primary key of a database?
+
 Primary key:-
 
 A table column with this constraint is called the key column for the table. This constraint helps the table to make sure that the value is not repeated and also that there are no null entries.
