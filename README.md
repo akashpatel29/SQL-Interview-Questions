@@ -296,7 +296,7 @@ A function must return a result. So that is also called a function that returns 
 
 • Try and catch statements are not used in functions.
 
-Function Types:
+Function Types:-
 
 The following is the function list in SQL Server databases.
 
