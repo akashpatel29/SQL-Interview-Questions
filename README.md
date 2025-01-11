@@ -388,7 +388,7 @@ A. Using DML Triggers: DML triggers are invoked when any DML command such as INS
 
 • DML triggers evaluate data before it has been committed to the database. o During this evaluation the following actions are performed.
 
-We cannot use the following commands in DML trigger:
+We cannot use the following commands in DML trigger:-
 
 o ALTER DATABASE
 
