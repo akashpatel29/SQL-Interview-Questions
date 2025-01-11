@@ -138,7 +138,7 @@ Update info Set City = 'Baroda' where id = 2
 # What is a database relationship?
 Relationships are created by linking the column in one table with the column in another table. There are four different types of relationship that can be created.
 
-The relationships are listed below:
+The relationships are listed below::
 
 One to One Relationship
 
