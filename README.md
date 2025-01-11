@@ -307,7 +307,7 @@ SQL Server contains the following aggregates functions:
 
 It is a database object that is bound to a table and is executed automatically. We cannot explicitly call any trigger. Triggers provide data integrity and used to access and check data before and after modification using DDL or DML query.
 
-There are two types of Triggers:
+There are two types of Triggers:-
 
 DDL Trigger
 
