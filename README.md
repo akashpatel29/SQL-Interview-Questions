@@ -736,7 +736,7 @@ AFTER triggers execute following the SQL action, such as an insert, update, or d
 
 INSTEAD OF triggers are executed automatically before the Primary Key and the Foreign Key constraints are checked, whereas the traditional AFTER triggers is executed after these constraints are checked. Unlike AFTER triggers, INSTEAD OF triggers can be created on views.
 
-if we have multiple AFTER Triggers on table how can we define the sequence od the triggers?
+If we have multiple AFTER Triggers on table how can we define the sequence od the triggers?
 If a table has multiple AFTER triggers, then you can specify which trigger should be executed first and which trigger should be executed last using the stored procedure sp_settriggerorder.
 
 # What is SQL injection?
