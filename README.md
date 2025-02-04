@@ -27,7 +27,7 @@ Output: Here we can see our database is created.
 # What is PL/SQL?
 PL/SQL Control Statements in Oracle.
 
-Control Statements
+Control Statements.
 
 • Control statements are very important in PL/SQL.
 
