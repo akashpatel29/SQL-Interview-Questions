@@ -222,7 +222,9 @@ This should remove all the duplicate columns from the table. Creation of tables 
 
 Second Normal Form (2NF):
 
-Meeting all requirements of the first normal form. Placing the subsets of data in separate tables and Creation of relationships between the tables using primary keys. Third Normal Form (3NF):
+Meeting all requirements of the first normal form. Placing the subsets of data in separate tables and Creation of relationships between the tables using primary keys. 
+
+Third Normal Form (3NF):
 
 This should meet all requirements of 2NF. Removing the columns which are not dependent on primary key constraints.
 
