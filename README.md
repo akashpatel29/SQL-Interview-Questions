@@ -340,7 +340,6 @@ We use a trigger when we want some event to happen automatically on certain desi
 # In SQL Server we can create the following 3 types of triggers:
 
 • Data Definition Language (DDL) triggers
-
 • Data Manipulation Language (DML) triggers
 
 • Logon triggers
