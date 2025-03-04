@@ -235,7 +235,7 @@ Meeting all the requirements of third normal form and it should not have multi- 
 # What is Denormalization?
 DeNormalization is a technique used to access the data from higher to lower normal forms of database. It is also process of introducing redundancy into a table by incorporating data from the related tables.
 
-# What is a stored procedure?
+# What is a stored-procedure?
 A Stored Procedure is a collection or a group of T-SQL statements. Stored Procedures are a precompiled set of one or more statements that are stored together in the database. They reduce the network load because of the precompilation. We can create a Stored Procedure using the "Create proc" statement.
 
 # Why we use Stored Procedure
