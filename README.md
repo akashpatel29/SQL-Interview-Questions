@@ -593,7 +593,6 @@ nvarchar datatype same as varchar datatype but only difference nvarchar is used 
 So if we are not using other languages then it’s better to use varchar datatype instead of nvarchar
 
 # Difference between bit tinyint smallint int and bigint datatypes in SQL Server?
-
 Bit DataType
 
 This datatype represents a single bit that can be 0 or 1.
