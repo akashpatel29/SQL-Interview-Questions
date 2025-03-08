@@ -173,7 +173,6 @@ A Unique key constraint uniquely identified each record in the database. This pr
 To define the relationship between two tables (one is called parent and the other one is the child table) connected by columns, a foreign key constraint is used. In this constraint the values of the child table must appear in the parent table, which means that for a foreign key, one table should point to a Primary Key in another table. A table can have multiple foreign keys and each foreign key can have a different referenced table.
 
 Example: To understand the foreign key clearly let's assume the following two tables:
-
 CUSTOMER {Cust_ID, Cust_Name, Age, ContactNo, Gender, Address} VENDOR {Vend_ID, Vend_Name, Cust_ID}
 
 Example: Foreign Key Constraint while using CREATE TABLE statement.
