@@ -127,7 +127,7 @@ Syntax: To delete all table records of a table:
 Delete Table Name DELETE info
 
 # How to update a database table using SQL?
-To update an existing Table we use SQL Command UPDATE: It will update the records as per user defined query/need.
+To update an existing Table we use SQL Command UPDATE: It will update the records as per user-defined query/need.
 
 Syntax:
 
